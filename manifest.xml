@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin_manifest>
+	<field key="author" value="ColdTrick IT Solutions" />
+	<field key="version" value="1.0.3" />
+	<field key="description" value="Opens all external links in a new window." />
+	<field key="website" value="http://www.coldtrick.com/" />
+	<field key="copyright" value="(C) ColdTrick 2010" />
+	<field key="licence" value="GNU Public License version 2" />
+	<field key="elgg_version" value="2010040201" />
+</plugin_manifest>
+<!--
+
+Todo:
+ - Add optional forwarding window (with "you are being redirected" info)
+ - Add Preview functionality
+ - Add new window indicator ("underline" or image) 
+
+==================
+Version history
+==================
+1.0.3 (2011-04-22):
+	- changed: using jquery live function to register target blank on external links
+	
+1.0.2 (2011-04-21):
+	- changed: extend view functions updated for 1.7.x
+	- changed: moved code to js instead of metatags view
+	- fixed: target should not override target if it is already present
+	- fixed: support for https in external link
+
+1.0.1 (2010-07-02):
+	- fixed: issue with href='#' (thx elggfan)
+	- fixed: widget content will now be handled
+
+1.0 (2010-07-02):
+	- initial version
+
+-->
