@@ -1,9 +1,5 @@
-= Todo =
-- Add optional forwarding window (with "you are being redirected" info)
-- Add Preview functionality
-- Add new window indicator ("underline" or image)
-
-= Version history =
+Version history
+===============
 
 2.0 (2012-01-17):
 
