@@ -12,6 +12,8 @@ $body .= "<a href='/news'>/news</a><br/>";
 $body .= "<a href='#'>#</a><br/>";
 $body .= "<a href='javascript:void(0);'>javascript:void(0);</a><br/>";
 
+$body .= elgg_view("output/url", array("text" => "demo link as button", "class" => "elgg-button elgg-buttom-action", "href" => "http://google.nl"));
+
 $content = elgg_view_layout("one_column", array("title" => elgg_echo("Test"), "content" => $body));
 
 echo elgg_view_page(elgg_echo("Test"), $content);

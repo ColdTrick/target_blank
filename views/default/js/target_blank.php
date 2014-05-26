@@ -14,6 +14,13 @@ elgg.target_blank.init = function() {
 	$external_links.live("click", function(){
 		$(this).attr("target", "_blank");
 	});
+
+	<?php 
+	$suffix = elgg_get_plugin_setting("link_suffix", "target_blank");
+	if (!empty($suffix)) {
+		echo '$external_links.append("' . $suffix . '");';
+	}
+	?>
 }
 
 elgg.register_hook_handler('init', 'system', elgg.target_blank.init);
