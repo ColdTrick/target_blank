@@ -18,7 +18,13 @@ elgg.target_blank.init = function() {
 	<?php 
 	$suffix = elgg_get_plugin_setting("link_suffix", "target_blank");
 	if (!empty($suffix)) {
-		echo '$external_links.append("' . $suffix . '");';
+		?>
+		$external_links.each(function() {
+			if (!$(this).find(" > img").length) {
+				$(this).append("<?php echo $suffix; ?>");
+			}
+		});
+		<?php 
 	}
 	?>
 }
