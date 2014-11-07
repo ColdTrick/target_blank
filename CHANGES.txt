@@ -1,6 +1,11 @@
 Version history
 ===============
 
+3.0 (2014-11-07):
+
+- added: plugin setting to append html to blank target links
+- added: blank target links now get an class 
+
 2.0 (2012-01-17):
 
 - changed: moved info from manifest to README.txt
