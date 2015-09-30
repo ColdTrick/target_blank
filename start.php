@@ -5,13 +5,16 @@
 
 /**
  * Inits the plugin
- * 
+ *
  * @return void
  */
 function target_blank_init() {
-	// extend js
-	elgg_extend_view("js/elgg", "js/target_blank");
-	
+	// add js
+	elgg_require_js('target_blank/target_blank');
+
+	// this cached view uses PHP to provide settings from database to javascript
+	elgg_register_simplecache_view('target_blank/settings.js');
+
 	// plugin hooks
 	elgg_register_plugin_hook_handler("action", "plugins/settings/save", "target_blank_plugins_settings_save_action_hook");
 

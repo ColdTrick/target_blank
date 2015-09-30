@@ -1,10 +1,14 @@
 Version history
 ===============
 
+4.0 (2015-MM-DD):
+
+- changed: javascript is now loaded asynchronously
+
 3.0 (2014-11-07):
 
 - added: plugin setting to append html to blank target links
-- added: blank target links now get an class 
+- added: blank target links now get an class
 
 2.0 (2012-01-17):
 
