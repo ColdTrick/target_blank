@@ -12,4 +12,6 @@
 		<type>elgg_release</type>
 		<version>1.9</version>
 	</requires>
+	
+ 	<category>ColdTrick</category>
 </plugin_manifest>
