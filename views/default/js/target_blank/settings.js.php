@@ -3,9 +3,7 @@
  * Provides plugins settings as an AMD module
  */
 
-$settings = array(
-    'link_suffix' => elgg_get_plugin_setting("link_suffix", "target_blank"),
-);
+$settings = ['link_suffix' => elgg_get_plugin_setting('link_suffix', 'target_blank')];
 ?>
 
 define(<?php echo json_encode($settings); ?>);
