@@ -1,9 +1,15 @@
 Version history
 ===============
 
-4.0 (2015-MM-DD):
+4.0 (2016-03-10):
 
+- added: composer support
+- changed: moved cache reset to action file
+- changed: moved test file to resource view
+- changed: upped the minimal Elgg requirement to 2.0
 - changed: javascript is now loaded asynchronously
+- fixed: moved the amd modules to the correct path
+- fixed: class typo in button
 
 3.0 (2014-11-07):
 
