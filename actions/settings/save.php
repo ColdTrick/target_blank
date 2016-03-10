@@ -27,7 +27,7 @@ $plugin_name = $plugin->getManifest()->getName();
 $result = false;
 
 foreach ($params as $k => $v) {
-	if ($k == "link_suffix") {
+	if ($k == 'link_suffix') {
 		$v = $unfiltered_params[$k];
 	}
 	$result = $plugin->setSetting($k, $v);
@@ -37,6 +37,8 @@ foreach ($params as $k => $v) {
 		exit;
 	}
 }
+
+elgg_invalidate_simplecache();
 
 system_message(elgg_echo('plugins:settings:save:ok', array($plugin_name)));
 forward(REFERER);
