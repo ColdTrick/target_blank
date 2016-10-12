@@ -17,9 +17,17 @@ define(function(require) {
 
 	if (suffix) {
 		$(selector).each(function() {
-			if (!$(this).find(" > img").length) {
-				$(this).append(suffix);
+			if ($(this).find(" > img").length) {
+				// there is an image in the link
+				return;
 			}
+			
+			if (!$(this).html().length) {
+				// there is no content in the anchor
+				return;
+			}
+			
+			$(this).append(suffix);
 		});
 	}
 });
