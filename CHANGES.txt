@@ -1,6 +1,10 @@
 Version history
 ===============
 
+4.0.1 (2016-10-12):
+
+- fixed: link suffix appended to empty links
+
 4.0 (2016-03-10):
 
 - added: composer support
