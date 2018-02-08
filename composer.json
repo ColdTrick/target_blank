@@ -3,7 +3,7 @@
 	"description": "Opens all external links in a new window",
 	"type": "elgg-plugin",
 	"keywords": ["elgg", "plugin"],
-	"license": "GPL-2.0",
+	"license": "GPL-2.0-only",
 	"support": {
 		"source": "https://github.com/ColdTrick/target_blank",
 		"issues": "https://github.com/ColdTrick/target_blank/issues"
@@ -14,5 +14,8 @@
 	"require-dev": {
 		"coldtrick/sniffs": "dev-master",
 		"coldtrick/releases": "dev-master"
+	},
+	"conflict": {
+		"elgg/elgg": "<3.0"
 	}
 }

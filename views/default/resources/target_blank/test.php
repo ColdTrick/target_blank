@@ -1,6 +1,6 @@
 <?php
 
-admin_gatekeeper();
+elgg_admin_gatekeeper();
 
 $body .= "<a href='http://www.google.nl'>Google.nl</a><br/>";
 $body .= "<a href='http://www.google.nl' style='display: none;'>Google.nl (display: none)</a><br/>";

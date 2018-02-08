@@ -5,12 +5,12 @@
 	<version>4.0.1</version>
 	<description>Opens all external links in a new window.</description>
 	<website>http://www.coldtrick.com/</website>
-	<copyright>(C) ColdTrick 2010 - 2012</copyright>
+	<copyright>(C) ColdTrick 2010 - 2018</copyright>
 	<license>GNU Public License version 2</license>
 
    	<requires>
 		<type>elgg_release</type>
-		<version>2.0</version>
+		<version>3.0</version>
 	</requires>
 	
  	<category>ColdTrick</category>

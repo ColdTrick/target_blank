@@ -10,14 +10,25 @@
  */
 function target_blank_init() {
 	elgg_require_js('target_blank/target_blank');
-
-	// this cached view uses PHP to provide settings from database to javascript
-	elgg_register_simplecache_view('js/target_blank/settings.js');
-
-	elgg_register_action('target_blank/settings/save', dirname(__FILE__) . '/actions/settings/save.php', 'admin');
 	
-	elgg_register_page_handler('target_blank', function() {
-		echo elgg_view_resource('target_blank/test');
+	elgg_register_plugin_hook_handler('elgg.data', 'page', function (\Elgg\Hook $hook) {
+		$result = $hook->getValue();
+		$result['target_blank']['link_suffix'] = elgg_get_plugin_setting('link_suffix', 'target_blank');
+		
+		return $result;
+	});
+
+	elgg_register_plugin_hook_handler('setting', 'plugin', function (\Elgg\Hook $hook) {
+		if ($hook->getParam('plugin_id') !== 'target_blank') {
+			return;
+		}
+		
+		if ($hook->getParam('name') !== 'link_suffix') {
+			return;
+		}
+		
+		$params = (array) get_input('params', [], false);
+		return elgg_extract('link_suffix', $params);
 	});
 }
 
