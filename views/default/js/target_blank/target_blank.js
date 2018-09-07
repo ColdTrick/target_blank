@@ -26,7 +26,7 @@ define(function(require) {
 				return;
 			}
 			
-			$(this).append(suffix);
+			$(this).append('<span class="target-blank-suffix">' + suffix + '</span>');
 		});
 	}
 });
