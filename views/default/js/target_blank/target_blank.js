@@ -16,7 +16,7 @@ define(function(require) {
 
 	if (suffix) {
 		$(selector).each(function() {
-			if ($(this).find(" > img").length) {
+			if ($(this).find(" > img, > .elgg-anchor-label > img").length) {
 				// there is an image in the link
 				return;
 			}
