@@ -3,7 +3,7 @@ language: php
 
 # which versions of PHP to build with
 php:
-- 5.6
+- 7.0
 
 # set global environment variables
 env:
@@ -36,7 +36,7 @@ before_deploy:
 deploy:
   provider: releases
   api_key:
-    secure: ACxkkJZKQjIWG/t/TMOwKiIWiJOZr+srOo7BgP474yZUAYJ1MqRUvSGbnrw0Uu5MieZL/pwykhthNflDsAc0OYtVUOGqfMqYQmpPQEKHmACj+BnM8Nt9fGd0lFfI6OXTt0ZeETWNSbZzMZJH9l4/D/EgW9UiwdLaY+bCDrVZ4t8=
+    secure: JSLi0TwVUCGhT7CNbTJCELWOZTYnwUKyOqLFzLdDI/fRK/e14eWGGQRi/Uy6/t2rH3egohnsNnnmmrDM8WsGDEOzDh4TbBqRZzPCW3mtxk9rPrKG+CVz78Dc9tGckIHy64UPW5wt1VfsSsppEGmXMniVZb0XYW5agOeO2L0CbII=
   # name of the zip to upload
   file: ${PROJECTNAME}_$TRAVIS_TAG.zip
   skip_cleanup: true
