@@ -5,8 +5,13 @@ define(function(require) {
 	var elgg = require('elgg');
 	var $ = require('jquery');
 
-	var selector = 'a[href^="http://"]:not([target], [href^="' + elgg.get_site_url() + '"]),'
-				   + 'a[href^="https://"]:not([target], [href^="' + elgg.get_site_url() + '"])';
+	var site_url = elgg.get_site_url().substring(4);
+	if (site_url.startsWith('s')) {
+		site_url = site_url.substring(1);
+	}
+
+	var selector = 'a[href^="http://"]:not([target], [href^="http' + site_url + '"], [href^="https' + site_url + '"]),'
+				   + 'a[href^="https://"]:not([target], [href^="http' + site_url + '"], [href^="https' + site_url + '"])';
 
 	$(document).on('click', selector, function () {
 		$(this).attr("target", "_blank");
