@@ -1,6 +1,7 @@
 <?php
 
 use ColdTrick\TargetBlank\Bootstrap;
+use Elgg\Router\Middleware\AdminGatekeeper;
 
 return [
 	'bootstrap' => Bootstrap::class,
@@ -20,6 +21,9 @@ return [
 		'target_blank:test' => [
 			'path' => '/target_blank/test',
 			'resource' => 'target_blank/test',
+			'middleware' => [
+				AdminGatekeeper::class,
+			],
 		],
 	],
 ];

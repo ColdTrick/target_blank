@@ -1,7 +1,5 @@
 <?php
 
-elgg_admin_gatekeeper();
-
 $body = "<a href='http://www.google.nl'>Google.nl</a><br/>";
 $body .= "<a href='http://www.google.nl' style='display: none;'>Google.nl (display: none)</a><br/>";
 $body .= "<a href='https://www.google.nl'>Google.nl (HTTPS)</a><br/>";
@@ -21,9 +19,6 @@ $body .= elgg_view('output/url', [
 	'href' => 'http://google.nl',
 ]);
 
-$content = elgg_view_layout('one_column', [
-	'title' => elgg_echo('Test'),
+echo elgg_view_page(elgg_echo('Test'), [
 	'content' => $body,
 ]);
-
-echo elgg_view_page(elgg_echo('Test'), $content);
