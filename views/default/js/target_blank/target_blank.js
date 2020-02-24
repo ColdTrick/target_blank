@@ -6,7 +6,7 @@ define(function(require) {
 	var $ = require('jquery');
 
 	var site_url = elgg.get_site_url().substring(4);
-	if (site_url.startsWith('s')) {
+	if (site_url.substring(0, 1) === 's') {
 		site_url = site_url.substring(1);
 	}
 
