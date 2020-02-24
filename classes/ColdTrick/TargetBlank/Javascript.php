@@ -11,7 +11,7 @@ class Javascript {
 	 *
 	 * @return array
 	 */
-	public function setLinkSuffix(\Elgg\Hook $hook) {
+	public static function setLinkSuffix(\Elgg\Hook $hook) {
 		$result = $hook->getValue();
 		
 		$result['target_blank']['link_suffix'] = elgg_get_plugin_setting('link_suffix', 'target_blank');
