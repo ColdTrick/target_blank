@@ -1,6 +1,12 @@
 Version history
 ===============
 
+6.0 (2020-03-03):
+
+- changed: increases minimal Elgg requirement to 3.1
+- changed: moved start.php to Bootstrap and elgg-plugin.php
+- fixed: make target blank js work in IE
+
 5.1 (2020-01-06):
 
 - changed: both http and https are detected as local urls
