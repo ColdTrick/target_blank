@@ -19,6 +19,6 @@ $body .= elgg_view('output/url', [
 	'href' => 'http://google.nl',
 ]);
 
-echo elgg_view_page(elgg_echo('Test'), [
+echo elgg_view_page('Target blank test page', [
 	'content' => $body,
 ]);
