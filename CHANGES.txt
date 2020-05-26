@@ -1,6 +1,10 @@
 Version history
 ===============
 
+6.0.1 (2020-05-26):
+
+- several small chores/fixes
+
 6.0 (2020-03-03):
 
 - changed: increases minimal Elgg requirement to 3.1
