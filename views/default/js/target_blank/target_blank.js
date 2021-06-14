@@ -1,9 +1,7 @@
 /**
  * JS to open links in a new window.
  */
-define(function(require) {
-	var elgg = require('elgg');
-	var $ = require('jquery');
+define(['jquery', 'elgg'], function($, elgg) {
 
 	var site_url = elgg.get_site_url().substring(4);
 	if (site_url.substring(0, 1) === 's') {
@@ -14,14 +12,18 @@ define(function(require) {
 				   + 'a[href^="https://"]:not([target], [href^="http' + site_url + '"], [href^="https' + site_url + '"])';
 
 	$(document).on('click', selector, function () {
-		$(this).attr("target", "_blank");
-	}).addClass("target-blank");
+		$(this).attr('target', '_blank');
+	}).addClass('target-blank');
 
-	var suffix = elgg.data.target_blank.link_suffix;
+	
+	var suffix = null;
+	if (!elgg.isUndefined(elgg.data.target_blank) && !elgg.isUndefined(elgg.data.target_blank.link_suffix)) {
+		suffix = elgg.data.target_blank.link_suffix;
+	}
 
 	if (suffix) {
 		$(selector).each(function() {
-			if ($(this).find(" > img, > .elgg-anchor-label > img").length) {
+			if ($(this).find(' > img, > .elgg-anchor-label > img').length) {
 				// there is an image in the link
 				return;
 			}

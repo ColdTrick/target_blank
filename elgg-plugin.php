@@ -4,6 +4,9 @@ use ColdTrick\TargetBlank\Bootstrap;
 use Elgg\Router\Middleware\AdminGatekeeper;
 
 return [
+	'plugin' => [
+		'version' => '6.0.1',
+	],
 	'bootstrap' => Bootstrap::class,
 	'hooks' => [
 		'elgg.data' => [
