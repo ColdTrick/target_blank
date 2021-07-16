@@ -9,6 +9,11 @@ return [
 	],
 	'bootstrap' => Bootstrap::class,
 	'hooks' => [
+		'config' => [
+			'htmlawed' => [
+				'\ColdTrick\TargetBlank\HTMLawed::denyTargetAttribute' => [],
+			],
+		],
 		'elgg.data' => [
 			'page' => [
 				'\ColdTrick\TargetBlank\Javascript::setLinkSuffix' => [],
