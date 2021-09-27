@@ -5,7 +5,7 @@ use Elgg\Router\Middleware\AdminGatekeeper;
 
 return [
 	'plugin' => [
-		'version' => '6.0.1',
+		'version' => '7.0',
 	],
 	'bootstrap' => Bootstrap::class,
 	'hooks' => [
