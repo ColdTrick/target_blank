@@ -17,7 +17,7 @@ define(['jquery', 'elgg'], function($, elgg) {
 
 	
 	var suffix = null;
-	if (!elgg.isUndefined(elgg.data.target_blank) && !elgg.isUndefined(elgg.data.target_blank.link_suffix)) {
+	if (elgg.data.target_blank !== undefined && elgg.data.target_blank.link_suffix !== undefined) {
 		suffix = elgg.data.target_blank.link_suffix;
 	}
 
