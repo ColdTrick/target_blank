@@ -1,6 +1,10 @@
 Version history
 ===============
 
+8.0 (2022-06-01):
+
+- changed: increased minimal Elgg version to 4.2
+
 7.0 (2021-09-27):
 
 - added: French translation
