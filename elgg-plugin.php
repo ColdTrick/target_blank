@@ -8,14 +8,14 @@ return [
 		'version' => '8.0',
 	],
 	'bootstrap' => Bootstrap::class,
-	'hooks' => [
+	'events' => [
 		'config' => [
 			'htmlawed' => [
 				'\ColdTrick\TargetBlank\HTMLawed::denyTargetAttribute' => [],
 			],
 		],
 		'elgg.data' => [
-			'page' => [
+			'site' => [
 				'\ColdTrick\TargetBlank\Javascript::setLinkSuffix' => [],
 			],
 		],

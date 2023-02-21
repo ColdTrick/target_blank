@@ -4,6 +4,9 @@ namespace ColdTrick\TargetBlank;
 
 use Elgg\DefaultPluginBootstrap;
 
+/**
+ * Bootstraps the plugin
+ */
 class Bootstrap extends DefaultPluginBootstrap {
 
 	/**

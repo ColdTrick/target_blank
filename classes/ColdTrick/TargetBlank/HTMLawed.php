@@ -2,21 +2,24 @@
 
 namespace ColdTrick\TargetBlank;
 
+/**
+ * HTMLawed related callbacks
+ */
 class HTMLawed {
 	
 	/**
 	 * Adds target as a denied attribute to HTMLawed config
 	 *
-	 * @param \Elgg\Hook $hook 'config', 'htmlawed'
+	 * @param \Elgg\Event $event 'config', 'htmlawed'
 	 *
 	 * @return void|array
 	 */
-	public static function denyTargetAttribute(\Elgg\Hook $hook) {
+	public static function denyTargetAttribute(\Elgg\Event $event) {
 		if (elgg_get_config('testing_mode')) {
 			return;
 		}
 		
-		$return_value = $hook->getValue();
+		$return_value = $event->getValue();
 		$deny_attribute = elgg_extract('deny_attribute', $return_value, '');
 		$deny_attribute = explode(',', $deny_attribute);
 		

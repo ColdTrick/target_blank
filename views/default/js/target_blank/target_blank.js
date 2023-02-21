@@ -8,8 +8,8 @@ define(['jquery', 'elgg'], function($, elgg) {
 		site_url = site_url.substring(1);
 	}
 
-	var selector = 'a[href^="http://"]:not([target], [href^="http' + site_url + '"], [href^="https' + site_url + '"]),'
-				   + 'a[href^="https://"]:not([target], [href^="http' + site_url + '"], [href^="https' + site_url + '"])';
+	var selector = 'a[href^="http://"]:not([target], [href^="http' + site_url + '"], [href^="https' + site_url + '"]),';
+	selector += 'a[href^="https://"]:not([target], [href^="http' + site_url + '"], [href^="https' + site_url + '"])';
 
 	$(document).on('click', selector, function () {
 		$(this).attr('target', '_blank');

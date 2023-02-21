@@ -2,21 +2,24 @@
 
 namespace ColdTrick\TargetBlank;
 
+/**
+ * Handles plugin settings
+ */
 class PluginSettings {
 
 	/**
-	 * Save the unfilterd input of the link suffix input
+	 * Save the unfiltered input of the link suffix input
 	 *
-	 * @param \Elgg\Hook $hook 'setting', 'plugin'
+	 * @param \Elgg\Event $event 'setting', 'plugin'
 	 *
 	 * @return void|string
 	 */
-	public static function saveLinkSuffix(\Elgg\Hook $hook) {
-		if ($hook->getParam('plugin_id') !== 'target_blank') {
+	public static function saveLinkSuffix(\Elgg\Event $event) {
+		if ($event->getParam('plugin_id') !== 'target_blank') {
 			return;
 		}
 		
-		if ($hook->getParam('name') !== 'link_suffix') {
+		if ($event->getParam('name') !== 'link_suffix') {
 			return;
 		}
 		

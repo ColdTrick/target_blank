@@ -9,3 +9,9 @@ echo elgg_view_field([
 	'name' => 'params[link_suffix]',
 	'value' => $plugin->link_suffix,
 ]);
+
+echo elgg_view_field([
+	'#type' => 'hidden',
+	'name' => 'flush_cache',
+	'value' => 1,
+]);
