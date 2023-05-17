@@ -1,4 +1,8 @@
 <?php
+/**
+ * This file was created by Translation Editor v11.1
+ * On 2023-05-17 15:18
+ */
 
 return array (
   'target_blank:settings:link_suffix' => 'Suffixe des liens',
