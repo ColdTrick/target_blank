@@ -10,7 +10,7 @@ class Javascript {
 	/**
 	 * Add the link suffix to the global JS data
 	 *
-	 * @param \Elgg\Event $event 'elgg.data', 'site'
+	 * @param \Elgg\Event $event 'elgg.data', 'page'
 	 *
 	 * @return array
 	 */

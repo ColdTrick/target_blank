@@ -13,6 +13,6 @@ class Bootstrap extends DefaultPluginBootstrap {
 	 * {@inheritDoc}
 	 */
 	public function init() {
-		elgg_require_js('target_blank/target_blank');
+		elgg_import_esm('target_blank/target_blank');
 	}
 }

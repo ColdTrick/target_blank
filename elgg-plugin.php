@@ -15,7 +15,7 @@ return [
 			],
 		],
 		'elgg.data' => [
-			'site' => [
+			'page' => [
 				'\ColdTrick\TargetBlank\Javascript::setLinkSuffix' => [],
 			],
 		],
