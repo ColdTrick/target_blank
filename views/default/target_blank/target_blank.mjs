@@ -10,7 +10,8 @@ if (site_url.substring(0, 1) === 's') {
 }
 
 var selector = 'a[href^="http://"]:not([target], [href^="http' + site_url + '"], [href^="https' + site_url + '"]),';
-selector += 'a[href^="https://"]:not([target], [href^="http' + site_url + '"], [href^="https' + site_url + '"])';
+selector += 'a[href^="https://"]:not([target], [href^="http' + site_url + '"], [href^="https' + site_url + '"]),';
+selector += 'a[data-target-blank-suffix]';
 
 $(document).on('click', selector, function () {
 	$(this).attr('target', '_blank');
