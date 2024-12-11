@@ -1,6 +1,10 @@
 Version history
 ===============
 
+10.1 (2024-12-11):
+
+- added: target blank behaviour can be forced on an anchor
+
 10.0 (2024-06-28):
 
 - changed: updated for Elgg 6
