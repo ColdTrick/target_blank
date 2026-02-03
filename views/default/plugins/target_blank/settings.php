@@ -11,6 +11,14 @@ echo elgg_view_field([
 ]);
 
 echo elgg_view_field([
+	'#type' => 'plaintext',
+	'#label' => elgg_echo('target_blank:settings:whitelist'),
+	'#help' => elgg_echo('target_blank:settings:whitelist:help'),
+	'name' => 'params[whitelist]',
+	'value' => $plugin->whitelist,
+]);
+
+echo elgg_view_field([
 	'#type' => 'hidden',
 	'name' => 'flush_cache',
 	'value' => 1,

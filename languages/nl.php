@@ -7,4 +7,6 @@
 return array (
   'target_blank:settings:link_suffix' => 'Link Suffix',
   'target_blank:settings:link_suffix:info' => 'Optioneel kun je een extra stukje HTML configureren wat achter elke externe link wordt toegevoegd. Hiermee kun je bijvoorbeeld een icoon toevoegen naast elke externe link om de indicatie te geven dat deze wordt geopend in een nieuw scherm.',
+  'target_blank:settings:whitelist' => 'Whitelist',
+  'target_blank:settings:whitelist:help' => 'Als URLs beginnen met een van de URLs die hier zijn geconfigureerd (een per regel) dan worden ze niet beschouwed als externe links.',
 );

@@ -18,8 +18,21 @@ if (elgg.data.target_blank !== undefined && elgg.data.target_blank.link_suffix !
 	suffix = elgg.data.target_blank.link_suffix;
 }
 
+let whitelist = null;
+if (elgg.data.target_blank !== undefined && elgg.data.target_blank.whitelist !== undefined) {
+	whitelist = elgg.data.target_blank.whitelist;
+}
+
 function init() {
-	$(selector).each(function() {
+	let $all_links = $(selector);
+
+	if (whitelist) {
+		$(whitelist).each(function() {
+			$all_links = $all_links.not('a[href^="' + this + '"]');
+		});
+	}
+
+	$all_links.each(function() {
 		const $link = $(this);
 		if ($link.hasClass('target-blank')) {
 			return;
