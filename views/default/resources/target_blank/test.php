@@ -3,6 +3,7 @@
 $body = "<a href='http://www.google.nl'>Google.nl</a><br/>";
 $body .= "<a href='http://www.google.nl' style='display: none;'>Google.nl (display: none)</a><br/>";
 $body .= "<a href='https://www.google.nl'>Google.nl (HTTPS)</a><br/>";
+$body .= "<a href='https://www.elgg.org'>" . elgg_view('output/img', ['src' => elgg_get_simplecache_url('graphics/elgg_logo.png')]) . "</a><br/>";
 $body .= "<a href='http://www.google.nl' target='_self'>Google.nl (target=_self)</a><br/>";
 $body .= "<a href='/news'>/news</a><br/>";
 $body .= "<a href='#'>#</a><br/>";
