@@ -19,7 +19,7 @@ class Javascript {
 		
 		$result['target_blank']['link_suffix'] = elgg_get_plugin_setting('link_suffix', 'target_blank');
 		
-		$whitelist = elgg_get_plugin_setting('whitelist', 'target_blank');
+		$whitelist = (string) elgg_get_plugin_setting('whitelist', 'target_blank');
 		$whitelist = explode("\r\n", $whitelist);
 		array_walk($whitelist, function (&$value) {
 			return trim($value);
