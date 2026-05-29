@@ -1,6 +1,10 @@
 Version history
 ===============
 
+10.2.1 (2026-05-29):
+
+- several small chores/fixes
+
 10.2 (2026-02-11):
 
 - added: whitelist setting of links that are considered internal
